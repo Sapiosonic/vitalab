@@ -61,4 +61,5 @@ def logar(request):
       # Avisa que o username ou senha está inváldia
       messages.add_message(request, constants.ERROR, 'Username ou senha inválidos')
       return redirect('/usuarios/login')
-   
+    
+    
