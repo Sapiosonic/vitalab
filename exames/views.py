@@ -71,8 +71,4 @@ def cancelar_pedido(request, pedido_id):
     messages.add_message(request, constants.SUCCESS, 'Pedido excluido com sucesso')
     return redirect('/exames/gerenciar_pedidos/')
 
-@login_required
-def gerenciar_pedidos(request):
-    pedidos_exames = PedidosExames.objects.filter(usuario=request.user)
-    return render(request, 'gerenciar_pedidos.html', {'pedidos_exames': pedidos_exames})
 
